@@ -1,2 +1,20 @@
-<h1>Static#homepage</h1>
-<p>Find me in app/views/static/homepage.html.erb</p>
+<h1>Homepage</h1>
+<p>This is the homepage</p>
+
+<% if current_user %>
+  Hi <%= current_user.email %>
+  <button>
+  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+  </button>
+<% else %>
+  <h4>Please register</h4>
+  <button>
+    <%= link_to "Register", new_user_registration_path %>
+  </button>
+  <button>
+    <%= link_to "Sign In", new_user_session_path %>
+  </button>
+<% end %>
+
+
+
