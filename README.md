@@ -4,5 +4,13 @@
 
 ##The Project:
 
-As second project of the WDI course at General Assembply I develop form scratch a photo
+As second project of the WDI course at General Assembly I develop a website in **Ruby on Rails**.
+Photo-Aid is a combination between a photosharing and a foundraising website.
+
+Photo-Aid allows charities to create campaign and user to contribute uploading photos or buying them.
+
+
+## Technologies Used: 
+
+
 
