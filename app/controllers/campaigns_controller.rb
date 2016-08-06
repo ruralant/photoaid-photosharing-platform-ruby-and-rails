@@ -1,35 +1,27 @@
 class CampaignsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_campaign, only: [:show, :edit, :update, :destroy]
   before_action :check_is_charity, except: [:index, :show]
 
   def check_is_charity
     if current_user.role != 'charity'
-      # redirect_to login_path
     end
   end
 
-  # GET /campaigns
-  # GET /campaigns.json
   def index
     @campaigns = Campaign.all
   end
 
-  # GET /campaigns/1
-  # GET /campaigns/1.json
   def show
   end
 
-  # GET /campaigns/new
   def new
     @campaign = Campaign.new
   end
 
-  # GET /campaigns/1/edit
   def edit
   end
 
-  # POST /campaigns
-  # POST /campaigns.json
   def create
     @campaign = Campaign.new(campaign_params)
 
@@ -44,8 +36,6 @@ class CampaignsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /campaigns/1
-  # PATCH/PUT /campaigns/1.json
   def update
     respond_to do |format|
       if @campaign.update(campaign_params)
@@ -58,8 +48,6 @@ class CampaignsController < ApplicationController
     end
   end
 
-  # DELETE /campaigns/1
-  # DELETE /campaigns/1.json
   def destroy
     @campaign.destroy
     respond_to do |format|
@@ -69,12 +57,10 @@ class CampaignsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_campaign
       @campaign = Campaign.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def campaign_params
       params.require(:campaign).permit(:title, :description)
     end
