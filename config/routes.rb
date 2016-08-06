@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :photos
+  resources :campaigns
   devise_for :users
   root 'static#homepage'
 
