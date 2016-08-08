@@ -6,7 +6,7 @@
 <p>I am a:</p>
   <div class="field">
     <% User::ROLES.each do |role| %>
-      <%= radio_button_tag "user[role]", role %>
+      <%= f.radio_button :role, role %>
       <%= label_tag role %>
     <% end %>
   </div>
@@ -16,7 +16,6 @@
     <%= f.text_field :name %>
   </div>
 
-  <% if is_charity? %>
   <div class="field">(leave blank if you are a charity)
     <%= f.label :username %><br />
     <%= f.text_field :username %>
@@ -31,7 +30,6 @@
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name %>
   </div>
-  <% end %>
 
   <div class="field">
     <%= f.label :email %><br />

@@ -53,6 +53,7 @@ class CampaignsController < ApplicationController
 
   private
     def check_is_charity
+      p current_user.role
       if current_user.role != 'charity'
         flash[:danger] = "You need to be a charity to create a campaign"
         redirect_to campaigns_path

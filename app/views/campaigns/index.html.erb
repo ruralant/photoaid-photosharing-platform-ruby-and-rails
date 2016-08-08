@@ -13,6 +13,13 @@
 
   <tbody>
     <% @campaigns.each do |campaign| %>
+    <div class="card">
+      <img class="card-img-top" src="<%= image_tag campaign.campaign_logo.url %>" alt="<%= campaign.title %>">
+      <div class="card-block">
+        <h4><%= campaign.title %></h4>
+        <p class="card-text"><%= campaign.description %></p>
+      </div>
+    </div>
       <tr>
         <td><%= campaign.title %></td>
         <td><%= image_tag campaign.campaign_logo.url %></td>
@@ -27,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Campaign', new_campaign_path if is_charity? %>
+<%= link_to 'New Campaign', new_campaign_path %>

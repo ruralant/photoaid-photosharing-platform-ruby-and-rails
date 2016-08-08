@@ -14,7 +14,7 @@
         <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
           <ul class="nav navbar-nav">
             <% if current_user %>
-              <a class="navbar-brand">Hi <%= current_user.first_name %>!</a>
+              <a class="navbar-brand">Hi <%= current_user.first_name || current_user.name if is_charity?%>!</a>
               <li class="nav-item"><%= link_to "Campaigns", campaigns_path, class:"nav-link"%></li>
               <li class="nav-item"><%= link_to "Charities", campaigns_path, class:"nav-link"%></li>
               <li class="nav-item"><%= link_to "Photos", photos_path, class:"nav-link"%></li>
@@ -25,10 +25,13 @@
               <li class="nav-item"><%= link_to "Register", new_user_registration_path, class:"nav-link" %></li>
             </ul>
           <% end %>
+          <% if is_charity? %>
+          <p>You're logged in as a charity!</p>
+          <% end %>
         </div>
       </nav>
     </header>
-    <main>
+    <main class="container">
       <%= yield %>
     </main>
   </body>
