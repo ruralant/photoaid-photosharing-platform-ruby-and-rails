@@ -15,5 +15,10 @@
   <%= @photo.description %>
 </p>
 
+<p>
+  <b>Donate Image:</b>
+  <%= image_tag @photo.campaign_pic.url %>
+</p>
+
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>

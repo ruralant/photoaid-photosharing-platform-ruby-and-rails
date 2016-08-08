@@ -16,6 +16,7 @@
     <% @photos.each do |photo| %>
       <tr>
         <td><%= photo.title %></td>
+        <td><%= image_tag photo.campaign_pic.url %></td>
         <td><%= photo.location %></td>
         <td><%= photo.description %></td>
         <td><%= link_to 'Show', photo %></td>
