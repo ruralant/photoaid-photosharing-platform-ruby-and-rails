@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
-  get 'users/show'
-
-  get 'users/index'
-
   resources :photos
   resources :campaigns
   devise_for :users
+  resources :users, only: [:index, :show]
   root 'static#homepage'
 
 

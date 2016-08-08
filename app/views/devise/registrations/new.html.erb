@@ -16,6 +16,7 @@
     <%= f.text_field :name %>
   </div>
 
+  <% if is_charity? %>
   <div class="field">(leave blank if you are a charity)
     <%= f.label :username %><br />
     <%= f.text_field :username %>
@@ -30,6 +31,7 @@
     <%= f.label :last_name %><br />
     <%= f.text_field :last_name %>
   </div>
+  <% end %>
 
   <div class="field">
     <%= f.label :email %><br />

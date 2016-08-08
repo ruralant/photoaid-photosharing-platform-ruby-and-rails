@@ -17,7 +17,8 @@
               <a class="navbar-brand">Hi <%= current_user.first_name %>!</a>
               <li class="nav-item"><%= link_to "Campaigns", campaigns_path, class:"nav-link"%></li>
               <li class="nav-item"><%= link_to "Charities", campaigns_path, class:"nav-link"%></li>
-              <li class="nav-item"><%= link_to "Your Profile", users_index_path, class:"nav-link" %></li>
+              <li class="nav-item"><%= link_to "Photos", photos_path, class:"nav-link"%></li>
+              <li class="nav-item"><%= link_to "Your Profile", users_path, class:"nav-link" %></li>
               <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, method: :delete, class:"nav-link" %></li>
           <% else %>
               <li class="nav-item"><%= link_to "Sign In", new_user_session_path, class:"nav-link" %></li>

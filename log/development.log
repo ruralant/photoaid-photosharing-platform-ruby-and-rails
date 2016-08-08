@@ -4749,3 +4749,737 @@ Processing by PhotosController#show as HTML
 Completed 200 OK in 47ms (Views: 39.1ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/" for ::1 at 2016-08-08 09:33:36 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#homepage as HTML
+  Rendering static/homepage.html.erb within layouts/application
+  Rendered static/homepage.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 290ms (Views: 266.3ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/ss" for ::1 at 2016-08-08 09:33:42 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/ss"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered collection of /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (8.4ms)
+  Rendered /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.1ms)
+  Rendering /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (126.5ms)
+Started GET "/photos/1" for ::1 at 2016-08-08 09:34:04 +0100
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered photos/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 61ms (Views: 34.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/photos/1/edit" for ::1 at 2016-08-08 09:34:12 +0100
+Processing by PhotosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/edit.html.erb within layouts/application
+  Rendered photos/_form.html.erb (14.1ms)
+  Rendered photos/edit.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 56ms (Views: 46.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/photos/1" for ::1 at 2016-08-08 09:34:22 +0100
+Processing by PhotosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/show.html.erb within layouts/application
+  Rendered photos/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 58ms (Views: 52.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/photos/1/edit" for ::1 at 2016-08-08 09:34:25 +0100
+Processing by PhotosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPhoto Load (0.7ms)[0m  [1m[34mSELECT  "photos".* FROM "photos" WHERE "photos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/edit.html.erb within layouts/application
+  Rendered photos/_form.html.erb (3.9ms)
+  Rendered photos/edit.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 58ms (Views: 49.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 09:34:31 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (1.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 66ms (Views: 39.9ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/users/index" for ::1 at 2016-08-08 09:34:35 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 46ms (Views: 40.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 09:34:36 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.6ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 59ms (Views: 54.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/index" for ::1 at 2016-08-08 09:39:13 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 50ms (Views: 44.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 09:39:17 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (1.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 57ms (Views: 51.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 09:39:23 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 59ms (Views: 54.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/photos" for ::1 at 2016-08-08 09:39:33 +0100
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (2.9ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 53ms (Views: 45.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/photos" for ::1 at 2016-08-08 09:50:46 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (24.3ms)
+Started GET "/photos" for ::1 at 2016-08-08 09:50:53 +0100
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.6ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (3.9ms)
+Started GET "/photos" for ::1 at 2016-08-08 09:50:53 +0100
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (1.0ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 2227ms (Views: 2216.0ms | ActiveRecord: 3.6ms)
+
+
+Completed 200 OK in 9555ms (Views: 9501.0ms | ActiveRecord: 12.9ms)
+
+
+Completed 200 OK in 2124ms (Views: 2115.6ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/photos" for ::1 at 2016-08-08 09:51:51 +0100
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (0.4ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 3296ms (Views: 3291.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 09:52:01 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (1.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 113ms (Views: 85.2ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 09:52:02 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (1.0ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 112ms (Views: 106.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 09:52:03 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.8ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 105ms (Views: 96.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/photos" for ::1 at 2016-08-08 09:52:05 +0100
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (1.3ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 122ms (Views: 115.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 09:52:06 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.7ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 103ms (Views: 95.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/campaigns/new" for ::1 at 2016-08-08 09:52:08 +0100
+Processing by CampaignsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/new.html.erb within layouts/application
+  Rendered campaigns/_form.html.erb (29.3ms)
+  Rendered campaigns/new.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 125ms (Views: 107.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/photos" for ::1 at 2016-08-08 09:52:13 +0100
+Processing by PhotosController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering photos/index.html.erb within layouts/application
+  [1m[36mPhoto Load (2.2ms)[0m  [1m[34mSELECT "photos".* FROM "photos"[0m
+  Rendered photos/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 96ms (Views: 87.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/index" for ::1 at 2016-08-08 09:52:13 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 80ms (Views: 75.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 10:07:40 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 104ms (Views: 96.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/campaigns/new" for ::1 at 2016-08-08 10:07:41 +0100
+Processing by CampaignsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/new.html.erb within layouts/application
+  Rendered campaigns/_form.html.erb (5.3ms)
+  Rendered campaigns/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 118ms (Views: 111.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/campaigns" for ::1 at 2016-08-08 10:07:52 +0100
+Processing by CampaignsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wk3ImFUtbWF0b8oXKnTo/bM/29br/apFfRhDiWwYty5GyH1ZC02M+uR50HuP8nws74s5HCID9ggEanQ3Cop09Q==", "campaign"=>{"title"=>"dddd", "description"=>"ddd", "campaign_logo"=>#<ActionDispatch::Http::UploadedFile:0x007ff83256d560 @tempfile=#<Tempfile:/var/folders/gq/20595gw53fzdg9gsy5wq933w0000gn/T/RackMultipart20160808-29950-h2z1vb.JPG>, @original_filename="IMG_0296.JPG", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"campaign[campaign_logo]\"; filename=\"IMG_0296.JPG\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Campaign"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering campaigns/new.html.erb within layouts/application
+  Rendered campaigns/_form.html.erb (2.6ms)
+  Rendered campaigns/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 79ms (Views: 63.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 10:10:44 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 99ms (Views: 65.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/campaigns/new" for ::1 at 2016-08-08 10:11:12 +0100
+Processing by CampaignsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :check_is_charity rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-08 10:11:12 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/index
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/index" for ::1 at 2016-08-08 10:11:12 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 63ms (Views: 60.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 10:11:34 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 96ms (Views: 66.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/campaigns/new" for ::1 at 2016-08-08 10:11:36 +0100
+Processing by CampaignsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :check_is_charity rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 10:11:36 +0100
+Processing by StaticController#homepage as HTML
+  Rendering static/homepage.html.erb within layouts/application
+  Rendered static/homepage.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 75.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 10:12:20 +0100
+Processing by StaticController#homepage as HTML
+  Rendering static/homepage.html.erb within layouts/application
+  Rendered static/homepage.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 105ms (Views: 89.0ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 10:12:22 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 99ms (Views: 82.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/campaigns/new" for ::1 at 2016-08-08 10:12:23 +0100
+Processing by CampaignsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :check_is_charity rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-08 10:12:23 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/index
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/users/index" for ::1 at 2016-08-08 10:12:23 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 67ms (Views: 64.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/campaigns/new" for ::1 at 2016-08-08 10:12:49 +0100
+Processing by CampaignsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :check_is_charity rendered or redirected
+Completed 302 Found in 32ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-08 10:12:49 +0100
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/index
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/users/index" for ::1 at 2016-08-08 10:12:49 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 71ms (Views: 66.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 10:13:27 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.7ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 97ms (Views: 67.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/campaigns/new" for ::1 at 2016-08-08 10:13:30 +0100
+Processing by CampaignsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/campaigns
+Filter chain halted as :check_is_charity rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 10:13:30 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.9ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 90ms (Views: 83.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/campaigns/new" for ::1 at 2016-08-08 10:13:32 +0100
+Processing by CampaignsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/campaigns
+Filter chain halted as :check_is_charity rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 10:13:32 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (1.1ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 81ms (Views: 75.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/campaigns/new" for ::1 at 2016-08-08 10:13:35 +0100
+Processing by CampaignsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/campaigns
+Filter chain halted as :check_is_charity rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 10:13:35 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.6ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 101ms (Views: 95.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/campaigns/new" for ::1 at 2016-08-08 10:13:36 +0100
+Processing by CampaignsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/campaigns
+Filter chain halted as :check_is_charity rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 10:13:36 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.5ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 100ms (Views: 93.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/campaigns/new" for ::1 at 2016-08-08 10:13:38 +0100
+Processing by CampaignsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/campaigns
+Filter chain halted as :check_is_charity rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 10:13:38 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (1.3ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 90ms (Views: 84.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 10:14:28 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 74ms (Views: 69.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/campaigns" for ::1 at 2016-08-08 10:15:55 +0100
+Processing by CampaignsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering campaigns/index.html.erb within layouts/application
+  [1m[36mCampaign Load (0.4ms)[0m  [1m[34mSELECT "campaigns".* FROM "campaigns"[0m
+  Rendered campaigns/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 85ms (Views: 56.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/ss" for ::1 at 2016-08-08 10:18:24 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/ss"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.3.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.3.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.3.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.6.0) lib/puma/configuration.rb:225:in `call'
+puma (3.6.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.6.0) lib/puma/server.rb:415:in `process_client'
+puma (3.6.0) lib/puma/server.rb:275:in `block in run'
+puma (3.6.0) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
+  Rendering /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [29 times] (9.4ms)
+  Rendered /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendering /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (132.6ms)
+Started DELETE "/users/sign_out" for ::1 at 2016-08-08 10:18:36 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"F65clsSgf+12LevEiuqHU85jNTzDcWN5rpsfoC/F1gU2QKzfdQpOD6lUJGdojaWb/+WOc7huICqWQbi9GAS0+Q=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 45ms (ActiveRecord: 10.2ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 10:18:36 +0100
+Processing by StaticController#homepage as HTML
+  Rendering static/homepage.html.erb within layouts/application
+  Rendered static/homepage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 77ms (Views: 74.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-08 10:18:38 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 97ms (Views: 95.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-08-08 10:18:47 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RgBrrfoFfGD5Tuul3kvkpU3Bp+s0Ctlnd/UCdCH0eDjBhH6NI8+20A/5EZzpLQLpUf64W7xPmVkEdCDuQGMzQA==", "user"=>{"email"=>"a@a.it", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "a@a.it"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2016-08-08 09:18:47 UTC], ["last_sign_in_at", 2016-08-08 07:19:27 UTC], ["sign_in_count", 7], ["updated_at", 2016-08-08 09:18:47 UTC], ["id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 203ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/users" for ::1 at 2016-08-08 10:18:47 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (5.3ms)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_index_path' for #<#<Class:0x007ff831e34438>:0x007ff8296e3218>
+Did you mean?  users_path):
+    18:               <li class="nav-item"><%= link_to "Campaigns", campaigns_path, class:"nav-link"%></li>
+    19:               <li class="nav-item"><%= link_to "Charities", campaigns_path, class:"nav-link"%></li>
+    20:               <li class="nav-item"><%= link_to "Photos", photos_path, class:"nav-link"%></li>
+    21:               <li class="nav-item"><%= link_to "Your Profile", users_index_path, class:"nav-link" %></li>
+    22:               <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, method: :delete, class:"nav-link" %></li>
+    23:           <% else %>
+    24:               <li class="nav-item"><%= link_to "Sign In", new_user_session_path, class:"nav-link" %></li>
+  
+app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb___3169823839737850096_70351984579960'
+  Rendering /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Antonio/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (92.7ms)
+Started GET "/users" for ::1 at 2016-08-08 10:19:17 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 75ms (Views: 73.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-08-08 10:19:20 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JbHWx7PsuhdwWt6zc1Ee3W6mjfP34fZRY+hP1ltTz99I187MEnN5xVjmkvFHncY0KaaoCq5x50ZsRSNTk18jqg=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 10:19:20 +0100
+Processing by StaticController#homepage as HTML
+  Rendering static/homepage.html.erb within layouts/application
+  Rendered static/homepage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 65ms (Views: 62.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-08 10:19:22 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 89ms (Views: 87.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2016-08-08 10:19:30 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lPmGaiqF0w/3PVab1v7Y3Q8k1pQnVpJq/EzV8zYue5nf5u+36IAnzwjN0SkOXTKWJIrhyrQth+rAMpmhEexjIg==", "user"=>{"email"=>"a@a.it", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "a@a.it"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2016-08-08 09:19:30 UTC], ["last_sign_in_at", 2016-08-08 09:18:47 UTC], ["sign_in_count", 8], ["updated_at", 2016-08-08 09:19:30 UTC], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 173ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/users" for ::1 at 2016-08-08 10:19:30 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 63ms (Views: 60.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2016-08-08 10:19:36 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/KhY9y6P2P/wn0IFLqlNLSp2dEQ+KX0RleqDwyFkfLcZkW4EdMDGz63ALC1X3jLNWt/rV6rrJ7o384nW+0L+JQ=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-08-08 10:19:36 +0100
+Processing by StaticController#homepage as HTML
+  Rendering static/homepage.html.erb within layouts/application
+  Rendered static/homepage.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 68ms (Views: 66.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-08 10:19:37 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 83ms (Views: 81.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-08 10:24:01 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 78ms (Views: 76.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-08 10:25:48 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2016-08-08 10:25:48 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 99ms (Views: 97.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for ::1 at 2016-08-08 10:25:50 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 87ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+

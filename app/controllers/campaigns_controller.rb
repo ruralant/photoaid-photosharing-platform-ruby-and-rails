@@ -3,11 +3,6 @@ class CampaignsController < ApplicationController
   before_action :set_campaign, only: [:show, :edit, :update, :destroy]
   before_action :check_is_charity, except: [:index, :show]
 
-  def check_is_charity
-    if current_user.role != 'charity'
-    end
-  end
-
   def index
     @campaigns = Campaign.all
   end
@@ -57,6 +52,13 @@ class CampaignsController < ApplicationController
   end
 
   private
+    def check_is_charity
+      if current_user.role != 'charity'
+        flash[:danger] = "You need to be a charity to create a campaign"
+        redirect_to campaigns_path
+      end
+    end
+
     def set_campaign
       @campaign = Campaign.find(params[:id])
     end
