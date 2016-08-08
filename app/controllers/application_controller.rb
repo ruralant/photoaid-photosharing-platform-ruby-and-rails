@@ -7,10 +7,16 @@ class ApplicationController < ActionController::Base
 
     helper_method :is_charity?
 
+    helper_method :is_donor?
+
     protected
 
       def is_charity?
         !current_user.nil? && current_user.role == 'charity'
+      end
+
+      def is_donor?
+        !current_user.role == 'donor'
       end
 
       def configure_permitted_parameters

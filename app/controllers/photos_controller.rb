@@ -10,6 +10,7 @@ class PhotosController < ApplicationController
   end
 
   def new
+    @campaign = Campaign.find(params[:id])
     @photo = Photo.new
   end
 
@@ -17,8 +18,9 @@ class PhotosController < ApplicationController
   end
 
   def create
+    @campaign = Campaign.find(params[:id])
     @photo = Photo.new(photo_params)
-
+    @photo.campaign_pic = @campaign
     respond_to do |format|
       if @photo.save
         format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
