@@ -14,20 +14,15 @@
   <tbody>
     <% @campaigns.each do |campaign| %>
     <div class="card">
-      <img class="card-img-top" src="<%= image_tag campaign.campaign_logo.url %>" alt="<%= campaign.title %>">
+      <img class="card-img-top" src="<%= campaign.campaign_logo.thumb.url %>" alt="<%= campaign.title %>">
       <div class="card-block">
         <h4><%= campaign.title %></h4>
         <p class="card-text"><%= campaign.description %></p>
+        <%= link_to 'Show', campaign %>
+        <%= link_to 'Edit', edit_campaign_path(campaign) %>
+        <%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
     </div>
-      <tr>
-        <td><%= campaign.title %></td>
-        <td><%= image_tag campaign.campaign_logo.url %></td>
-        <td><%= campaign.description %></td>
-        <td><%= link_to 'Show', campaign %></td>
-        <td><%= link_to 'Edit', edit_campaign_path(campaign) %></td>
-        <td><%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
     <% end %>
   </tbody>
 </table>
