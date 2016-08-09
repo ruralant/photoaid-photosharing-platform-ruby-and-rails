@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  def show
-    @photo = Photo.find(params[:id])
+  def index
+    @user = User.all
   end
 end

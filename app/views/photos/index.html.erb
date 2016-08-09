@@ -13,6 +13,7 @@
   </thead>
 
   <tbody>
+  
     <% @photos.each do |photo| %>
       <tr>
         <td><%= photo.title %></td>
@@ -30,3 +31,4 @@
 <br>
 
 <%= link_to 'New Photo', new_campaign_photo_path(@campaign) %>
+<% end %>

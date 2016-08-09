@@ -1,19 +1,22 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @campaign.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @campaign.description %>
-</p>
-
-<p>
-  <b>Logo:</b>
-  <%= link_to image_tag(@campaign.campaign_logo.thumb.url), @campaign.campaign_logo.url %>
-</p>
+<table>
+  <th>
+  <p>
+    <b>Logo:</b>
+    <%= link_to image_tag(@campaign.campaign_logo.thumb.url), @campaign.campaign_logo.url %>
+  </p>
+  </th>
+  <th>
+    <p>
+      <strong>Title:</strong>
+      <%= @campaign.title %>
+    </p>
+    <p>
+      <strong>Description:</strong>
+      <%= @campaign.description %>
+    </p>
+  </th>
+</table>
 
 <%= link_to 'New Photo', new_campaign_photo_path(@campaign) %>
 
@@ -27,8 +30,9 @@
           <p class="card-text"><%= photo.description %></p>
           <small class="text-muted">Added on <%= distance_of_time_in_words(Time.now, photo.created_at) %> ago</small></p>
           <%= link_to 'Show', campaign_photo_path(@campaign, photo), class: "btn btn-primary" %>
-          <%= link_to 'Edit', edit_campaign_photo_path(@campaign, photo), class: "btn btn-primary" %>
-          <%= link_to 'Destroy', campaign_photo_path(@campaign, photo), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+          <%= link_to 'Buy', campaign_photo_path(@campaign, photo), class: "btn btn-primary" %> 
+          <%= link_to 'Edit', edit_campaign_photo_path(@campaign, photo), class: "btn btn-primary" if is_charity? OR if user_session == current_user.id %>
+          <%= link_to 'Delete', campaign_photo_path(@campaign, photo), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" if is_charity? OR if user_session == current_user.id %>
         </div>
       </div>
     <% end %>

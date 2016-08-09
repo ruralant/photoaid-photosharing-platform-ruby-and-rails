@@ -1,24 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div id="photopage">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @photo.title %>
-</p>
+  <p>
+    <strong>Title:</strong>
+    <%= @photo.title %>
+  </p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @photo.location %>
-</p>
+  <p>
+    <strong>Location:</strong>
+    <%= @photo.location %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @photo.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @photo.description %>
+  </p>
 
-<p>
-  <b>Donate Image:</b>
-  <%= image_tag @photo.campaign_pic.url %>
-</p>
+  <div class="image">
+    <%= image_tag @photo.campaign_pic.url %>
+  </div>
 
-<%= link_to 'Edit', edit_campaign_photo_path(@photo) %> |
-<%= link_to 'Back', campaign_photos_path %>
+  <br>
+
+  <%= link_to 'Buy', campaign_photo_path(@photo), class: "btn btn-primary" %>
+
+  <%= link_to 'Edit', edit_campaign_photo_path(@photo) %> |
+  <%= link_to 'Back', @campaign %>
+</div>
