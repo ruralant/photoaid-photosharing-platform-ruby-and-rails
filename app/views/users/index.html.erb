@@ -1,4 +1,4 @@
-<h3>Hi <%= current_user.first_name || (current_user.name if is_charity?) %>!</h3>
+<h3>Hi <%= is_charity? ? current_user.name : current_user.first_name %>!</h3>
 
 <div class="row">
   <div class="col-md-4">
@@ -11,3 +11,18 @@
   </div>
 </div>
 <br>
+
+<% if is_charity? %>
+  <% current_user.campaigns.each do |campaign| %>
+    <div>
+      <%= campaign.title %>
+      <%= image_tag campaign.campaign_logo.thumb %>
+    </div>
+  <% end %>
+<% else %>
+  <% current_user.photos.each do |photo| %>
+    <div>
+      <%= photo.title %>
+    </div>
+    <% end %>
+<% end %>

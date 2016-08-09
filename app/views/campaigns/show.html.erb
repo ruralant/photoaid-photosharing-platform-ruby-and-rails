@@ -31,8 +31,8 @@
           <small class="text-muted">Added on <%= distance_of_time_in_words(Time.now, photo.created_at) %> ago</small></p>
           <%= link_to 'Show', campaign_photo_path(@campaign, photo), class: "btn btn-primary" %>
           <%= link_to 'Buy', campaign_photo_path(@campaign, photo), class: "btn btn-primary" %> 
-          <%= link_to 'Edit', edit_campaign_photo_path(@campaign, photo), class: "btn btn-primary" if is_charity? OR if user_session == current_user.id %>
-          <%= link_to 'Delete', campaign_photo_path(@campaign, photo), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" if is_charity? OR if user_session == current_user.id %>
+          <%= link_to 'Edit', edit_campaign_photo_path(@campaign, photo), class: "btn btn-primary" if is_charity? || user_session == current_user.id %>
+          <%= link_to 'Delete', campaign_photo_path(@campaign, photo), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" if is_charity? || user_session == current_user.id %>
         </div>
       </div>
     <% end %>

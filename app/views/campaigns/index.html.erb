@@ -4,12 +4,11 @@
     <% @campaigns.each do |campaign| %>
       <% if campaign.user_id == current_user.id || current_user.role == "donor" %>
         <div class="card">
-          <img class="card-img-top" src="<%= campaign.campaign_logo.thumb.url %>" alt="<%= campaign.title %>">
+          <%= link_to image_tag(campaign.campaign_logo.thumb, class: "card-img-top", alt: campaign.title), campaign %>
           <div class="card-block">
             <h4 class="card-title"><%= campaign.title %></h4>
             <p class="card-text"><%= campaign.description %></p>
             <small class="text-muted">Added on <%= distance_of_time_in_words(Time.now, campaign.created_at) %> ago</small></p>
-            <%= link_to 'Show', campaign, class: "btn btn-primary" %>
             <%= link_to 'Edit', edit_campaign_path(campaign), class: "btn btn-primary" if is_charity?%>
             <%= link_to 'Delete', campaign, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" if is_charity? %>
           </div>

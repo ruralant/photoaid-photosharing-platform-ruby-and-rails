@@ -13,14 +13,14 @@
   </thead>
 
   <tbody>
-  
+
     <% @photos.each do |photo| %>
       <tr>
         <td><%= photo.title %></td>
-        <td><%= image_tag photo.campaign_pic.url %></td>
+        <td><%= link_to image_tag(photo.campaign_pic.url), campaign_photo_path(@campaign, photo) %></td>
         <td><%= photo.location %></td>
         <td><%= photo.description %></td>
-        <td><%= link_to 'Show', campaign_photo_path(@campaign, photo) %></td>
+        <td></td>
         <td><%= link_to 'Edit', edit_campaign_photo_path(@campaign, photo) %></td>
         <td><%= link_to 'Destroy', campaign_photo_path(@campaign, photo), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -31,4 +31,3 @@
 <br>
 
 <%= link_to 'New Photo', new_campaign_photo_path(@campaign) %>
-<% end %>
