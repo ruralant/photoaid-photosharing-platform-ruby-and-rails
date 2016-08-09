@@ -4,7 +4,7 @@
 <div class="card-deck-wrapper">
   <div class="card-deck">
     <% @campaigns.each do |campaign| %>
-    <% if campaign.user_id == current_user.id %>
+    <% if campaign.user_id == current_user.id || current_user.role == "donor" %>
     <div class="card">
       <img class="card-img-top" src="<%= campaign.campaign_logo.thumb.url %>" alt="<%= campaign.title %>">
       <div class="card-block">
@@ -12,12 +12,12 @@
         <p class="card-text"><%= campaign.description %></p>
         <small class="text-muted">Added on <%= distance_of_time_in_words(Time.now, campaign.created_at) %> ago</small></p>
         <%= link_to 'Show', campaign, class: "btn btn-primary" %>
-        <%= link_to 'Edit', edit_campaign_path(campaign), class: "btn btn-primary" %>
-        <%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+        <%= link_to 'Edit', edit_campaign_path(campaign), class: "btn btn-primary" if is_charity?%>
+        <%= link_to 'Destroy', campaign, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" if is_charity? %>
       </div>
     </div>
     <% else %>
-    <span>That one isn't yours :(</span>
+    <span>Hide this element</span>
     <% end %>
     <% end %>
   </div>

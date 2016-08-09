@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :rememberable, :trackable, :validatable
 
   has_many :campaigns
+  has_many :photos
   has_and_belongs_to_many :campaigns_contributing, class_name: "Campaign", join_table: "campaigns_users"
 
   ROLES = ["donor", "charity"]

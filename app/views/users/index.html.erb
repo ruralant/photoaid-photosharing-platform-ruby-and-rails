@@ -1,11 +1,8 @@
 <h3>Hi <%= current_user.first_name %>!</h3>
 
-
-
 <%= link_to image_tag(current_user.profile_picture.thumb.url), current_user.profile_picture.url %>
 
 <p><%= current_user.description %></p>
-
 
 <button>
 <%= link_to "Edit your profile", edit_user_registration_path %>

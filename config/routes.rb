@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
   resources :campaigns do
-    member do
-      resources :photos
+    resources :photos
   end
-end
   devise_for :users
   resources :users, only: [:index, :show]
   root 'static#homepage'

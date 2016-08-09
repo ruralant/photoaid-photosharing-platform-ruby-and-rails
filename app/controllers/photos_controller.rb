@@ -1,6 +1,7 @@
 class PhotosController < ApplicationController
   before_action :authenticate_user!
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
+  before_action :set_campaign
 
   def index
     @photos = Photo.all
@@ -10,7 +11,6 @@ class PhotosController < ApplicationController
   end
 
   def new
-    @campaign = Campaign.find(params[:id])
     @photo = Photo.new
   end
 
@@ -18,12 +18,13 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @campaign = Campaign.find(params[:id])
     @photo = Photo.new(photo_params)
-    @photo.campaign_pic = @campaign
+    @photo.user = current_user
+    @photo.campaign = @campaign
+
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
+        format.html { redirect_to campaign_photo_path(@campaign, @photo), notice: 'Photo was successfully created.' }
         format.json { render :show, status: :created, location: @photo }
       else
         format.html { render :new }
@@ -35,7 +36,7 @@ class PhotosController < ApplicationController
   def update
     respond_to do |format|
       if @photo.update(photo_params)
-        format.html { redirect_to @photo, notice: 'Photo was successfully updated.' }
+        format.html { redirect_to campaign_photo_path(@campaign, @photo), notice: 'Photo was successfully updated.' }
         format.json { render :show, status: :ok, location: @photo }
       else
         format.html { render :edit }
@@ -47,7 +48,7 @@ class PhotosController < ApplicationController
   def destroy
     @photo.destroy
     respond_to do |format|
-      format.html { redirect_to photos_url, notice: 'Photo was successfully destroyed.' }
+      format.html { redirect_to campaign_photos_path(@campaign), notice: 'Photo was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -55,6 +56,10 @@ class PhotosController < ApplicationController
   private
     def set_photo
       @photo = Photo.find(params[:id])
+    end
+
+    def set_campaign
+      @campaign = Campaign.find(params[:campaign_id])
     end
 
     def photo_params

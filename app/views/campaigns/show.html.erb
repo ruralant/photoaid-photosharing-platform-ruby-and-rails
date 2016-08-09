@@ -15,7 +15,25 @@
   <%= link_to image_tag(@campaign.campaign_logo.thumb.url), @campaign.campaign_logo.url %>
 </p>
 
-<%= link_to 'New Photo', new_photo_path %>
+<%= link_to 'New Photo', new_campaign_photo_path(@campaign) %>
 
-<%= link_to 'Edit', edit_campaign_path(@campaign) %> |
+<div class="card-deck-wrapper">
+  <div class="card-deck">
+    <% @campaign.photos.each do |photo| %>
+      <div class="card">
+        <%= image_tag photo.campaign_pic.thumb.url, class: "card-img-top", alt: photo.title %>
+        <div class="card-block">
+          <h4 class="card-title"><%= photo.title %></h4>
+          <p class="card-text"><%= photo.description %></p>
+          <small class="text-muted">Added on <%= distance_of_time_in_words(Time.now, photo.created_at) %> ago</small></p>
+          <%= link_to 'Show', campaign_photo_path(@campaign, photo), class: "btn btn-primary" %>
+          <%= link_to 'Edit', edit_campaign_photo_path(@campaign, photo), class: "btn btn-primary" %>
+          <%= link_to 'Destroy', campaign_photo_path(@campaign, photo), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_campaign_path(@campaign) if is_charity? %> |
 <%= link_to 'Back', campaigns_path %>
