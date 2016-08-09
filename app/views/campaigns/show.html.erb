@@ -1,12 +1,8 @@
-<p id="notice"><%= notice %></p>
-<table>
-  <th>
-  <p>
-    <b>Logo:</b>
+<div class="row">
+  <div class="col-md-4">
     <%= link_to image_tag(@campaign.campaign_logo.thumb.url), @campaign.campaign_logo.url %>
-  </p>
-  </th>
-  <th>
+  </div>
+  <div class="col-md-8">
     <p>
       <strong>Title:</strong>
       <%= @campaign.title %>
@@ -15,10 +11,14 @@
       <strong>Description:</strong>
       <%= @campaign.description %>
     </p>
-  </th>
-</table>
+    <p>
+      <%= link_to 'Edit', edit_campaign_path(@campaign), class: "btn btn-secondary" if is_charity? %>
+      <%= link_to 'Add New Photo', new_campaign_photo_path(@campaign), class: "btn btn-secondary" %>
+    </p>
+  </div>
+</div>
 
-<%= link_to 'New Photo', new_campaign_photo_path(@campaign) %>
+<br>
 
 <div class="card-deck-wrapper">
   <div class="card-deck">
@@ -39,5 +39,4 @@
   </div>
 </div>
 
-<%= link_to 'Edit', edit_campaign_path(@campaign) if is_charity? %> |
 <%= link_to 'Back', campaigns_path %>

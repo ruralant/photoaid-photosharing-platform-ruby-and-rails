@@ -6,12 +6,8 @@
   </div>
   <div class="col-md-8">
     <p><%= current_user.description %></p>
+    <%= link_to "Edit your profile", edit_user_registration_path, class: "btn btn-secondary" %>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-secondary" %>
   </div>
 </div>
 <br>
-<button>
-<%= link_to "Edit your profile", edit_user_registration_path %>
-</button>
-<button>
-<%= link_to "Log out", destroy_user_session_path, method: :delete %>
-</button>
