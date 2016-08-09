@@ -1,13 +1,14 @@
 <h3>Hi <%= current_user.first_name || (current_user.name if is_charity?) %>!</h3>
 
 <div class="row">
-  <div class="span4">
+  <div class="col-md-4">
     <%= link_to image_tag(current_user.profile_picture.thumb.url), current_user.profile_picture.url %>
   </div>
-  <div class="span8">
+  <div class="col-md-8">
     <p><%= current_user.description %></p>
   </div>
 </div>
+<br>
 <button>
 <%= link_to "Edit your profile", edit_user_registration_path %>
 </button>
