@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-4">
-    <%= link_to image_tag(@campaign.campaign_logo.thumb.url), @campaign.campaign_logo.url %>
+    <%= link_to image_tag(@campaign.campaign_logo.thumb.url), @campaign.campaign_logo.url%>
   </div>
   <div class="col-md-8">
     <p>
@@ -24,7 +24,7 @@
   <div class="card-deck">
     <% @campaign.photos.each do |photo| %>
       <div class="card">
-        <%= image_tag photo.campaign_pic.thumb.url, class: "card-img-top", alt: photo.title %>
+        <%= image_tag photo.campaign_pic.thumb.url, class: "card-img-top", class: "img-fluid", alt: photo.title %>
         <div class="card-block">
           <h4 class="card-title"><%= photo.title %></h4>
           <p class="card-text"><%= photo.description %></p>

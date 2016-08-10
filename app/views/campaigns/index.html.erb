@@ -4,7 +4,7 @@
     <% @campaigns.each do |campaign| %>
       <% if campaign.user_id == current_user.id || current_user.role == "donor" %>
         <div class="card">
-          <%= link_to image_tag(campaign.campaign_logo.thumb, class: "card-img-top", alt: campaign.title), campaign %>
+          <%= link_to image_tag(campaign.campaign_logo.thumb, class: "card-img-top", class: "img-fluid", alt: campaign.title), campaign %>
           <div class="card-block">
             <h4 class="card-title"><%= campaign.title %></h4>
             <p class="card-text"><%= campaign.description %></p>

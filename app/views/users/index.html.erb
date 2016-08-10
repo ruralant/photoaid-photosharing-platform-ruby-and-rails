@@ -12,12 +12,12 @@
 </div>
 <br>
 
-<div class="card-deck-wrapper">
+
   <div class="card-group">
     <% if is_charity? %>
       <% current_user.campaigns.each do |campaign| %>
         <div class="card">
-        <%= image_tag campaign.campaign_logo.thumb %>
+          <%= image_tag campaign.campaign_logo.thumb, class: "img-fluid"%>
           <div class="card-block">
             <h4 class="card-title"><%= campaign.title %></h4>
             <p class="card-text"><%= campaign.description %></p>
@@ -30,7 +30,7 @@
     <% else %>
       <% current_user.photos.each do |photo| %>
       <div class="card">
-      <%= link_to image_tag(photo.campaign_pic.url), campaign_photo_path(photo.campaign, photo) %>
+      <%= link_to image_tag(photo.campaign_pic.url), campaign_photo_path(photo.campaign, photo), class: "img-fluid"%>
         <div class="card-block">
           <h4 class="card-title"><%= photo.title %></h4>
           <p class="card-text"><%= photo.description %></p>
@@ -42,4 +42,3 @@
       <% end %>
     <% end %>
   </div>
-</div>

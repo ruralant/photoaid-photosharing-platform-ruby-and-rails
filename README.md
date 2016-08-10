@@ -48,5 +48,4 @@ Monday I started to work on the relationships and I created the main stucture of
 
 On Tuesday I created a quite extensive seed file, fixed numerous bugs and I reached a fully working MVP.
 
-
-
+Wednesday: UX fixes for user page, js bootstrap fix, seed file consolidation, 
