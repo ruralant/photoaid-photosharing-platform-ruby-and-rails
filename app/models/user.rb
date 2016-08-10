@@ -8,5 +8,7 @@ class User < ApplicationRecord
   has_many :photos
   has_and_belongs_to_many :campaigns_contributing, class_name: "Campaign", join_table: "campaigns_users"
 
+  validates_presence_of :role
+
   ROLES = ["donor", "charity"]
 end

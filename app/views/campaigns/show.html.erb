@@ -23,7 +23,7 @@
 <div class="card-columns">
   <% @campaign.photos.each do |photo| %>
     <div class="card">
-      <%= link_to image_tag(photo.campaign_pic.thumb.url, class: "card-img-top", class: "img-fluid", alt: photo.title), photo.campaign %>
+      <%= link_to image_tag(photo.campaign_pic.thumb.url, class: "card-img-top, img-fluid", alt: photo.title), photo.campaign %>
       <div class="card-block">
         <h4 class="card-title"><%= photo.title %></h4>
         <p class="card-text"><%= photo.description %></p>

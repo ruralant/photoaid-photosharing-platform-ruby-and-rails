@@ -6,7 +6,7 @@
 <p>I am a:</p>
   <div class="field">
     <% User::ROLES.each do |role| %>
-      <%= f.radio_button :role, role %>
+      <%= f.radio_button :role, role, checked: role == 'donor' %>
       <%= label_tag role %>
     <% end %>
   </div>
