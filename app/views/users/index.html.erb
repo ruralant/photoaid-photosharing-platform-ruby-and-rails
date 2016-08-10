@@ -13,32 +13,32 @@
 
 <br>
 
-  <div class="card-group">
-    <% if is_charity? %>
-      <% current_user.campaigns.each do |campaign| %>
-        <div class="card">
-          <%= link_to image_tag(campaign.campaign_logo.thumb, class: "img-fluid"), campaign_path(campaign) %>
-          <div class="card-block">
-            <h4 class="card-title"><%= campaign.title %></h4>
-            <p class="card-text"><%= campaign.description %></p>
-            <small class="text-muted">Added on <%= distance_of_time_in_words(Time.now, campaign.created_at) %> ago</small></p>
-            <%= link_to 'Edit', edit_campaign_path(campaign), class: "btn btn-outline-primary" if is_charity?%>
-            <%= link_to 'Delete', campaign, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" if is_charity? %>
-          </div>
-        </div>
-      <% end %>
-    <% else %>
-      <% current_user.photos.each do |photo| %>
+<div class="card-columns">
+  <% if is_charity? %>
+    <% current_user.campaigns.each do |campaign| %>
       <div class="card">
-      <%= link_to image_tag(photo.campaign_pic.url, class: "img-fluid"), campaign_photo_path(photo.campaign, photo) %>
+        <%= link_to image_tag(campaign.campaign_logo.thumb, class: "card-img-top img-fluid"), campaign_path(campaign) %>
         <div class="card-block">
-          <h4 class="card-title"><%= photo.title %></h4>
-          <p class="card-text"><%= photo.description %></p>
-          <small class="text-muted">Added on <%= distance_of_time_in_words(Time.now, photo.campaign.created_at) %> ago</small></p>
-          <%= link_to 'Edit', edit_campaign_photo_path(photo.campaign, photo), class: "btn btn-outline-primary" %>
-          <%= link_to 'Destroy', campaign_photo_path(photo.campaign, photo), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
+          <h4 class="card-title"><%= campaign.title %></h4>
+          <p class="card-text"><%= campaign.description %></p>
+          <small class="text-muted">Added on <%= distance_of_time_in_words(Time.now, campaign.created_at) %> ago</small></p>
+          <%= link_to 'Edit', edit_campaign_path(campaign), class: "btn btn-outline-primary" if is_charity?%>
+          <%= link_to 'Delete', campaign, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" if is_charity? %>
         </div>
-      </div>      
-      <% end %>
+      </div>
     <% end %>
-  </div>
+  <% else %>
+    <% current_user.photos.each do |photo| %>
+    <div class="card">
+    <%= link_to image_tag(photo.campaign_pic.url, class: "img-fluid"), campaign_photo_path(photo.campaign, photo) %>
+      <div class="card-block">
+        <h4 class="card-title"><%= photo.title %></h4>
+        <p class="card-text"><%= photo.description %></p>
+        <small class="text-muted">Added on <%= distance_of_time_in_words(Time.now, photo.campaign.created_at) %> ago</small></p>
+        <%= link_to 'Edit', edit_campaign_photo_path(photo.campaign, photo), class: "btn btn-outline-primary" %>
+        <%= link_to 'Destroy', campaign_photo_path(photo.campaign, photo), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
+      </div>
+    </div>      
+    <% end %>
+  <% end %>
+</div>
