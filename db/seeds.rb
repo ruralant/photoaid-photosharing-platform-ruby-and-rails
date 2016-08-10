@@ -32,23 +32,25 @@ user10 = User.create(username:"anneseidelozil", first_name:"Annegret", last_name
 
 
 
-campaign1 = Campaign.create!(title:"A fairer world", description:"The gap between the rich and the rest is spiralling out of control, and standing in the way of ending global poverty.", user_id: user1.id, campaign_logo: open("./public/img/bhf_logo.png"))
+campaign1 = Campaign.create!(title:"A fairer world", description:"The gap between the rich and the rest is spiralling out of control, and standing in the way of ending global poverty.", user_id: user1.id, campaign_logo: open("./public/img/campaign1.jpg"))
 
-campaign2 = Campaign.create(title:"A cleaner future", description:"When we fight for a global solution to climate change, we help protect millions of people from being forced into hunger.", user_id: user1.id, campaign_logo: open("./public/img/bhf_logo.png"))
+campaign2 = Campaign.create(title:"A cleaner future", description:"When we fight for a global solution to climate change, we help protect millions of people from being forced into hunger.", user_id: user1.id, campaign_logo: open("./public/img/campaign2.png"))
 
-campaign3 = Campaign.create(title:"Safety and dignity", description:"When the world's poorest and most vulnerable people are hit by disasters, we help make their voices heard.", user_id: user1.id, campaign_logo: open("./public/img/bhf_logo.png"))
+campaign3 = Campaign.create(title:"Safety and dignity", description:"When the world's poorest and most vulnerable people are hit by disasters, we help make their voices heard.", user_id: user1.id, campaign_logo: open("./public/img/campaign3.jpg"))
 
-campaign4 = Campaign.create(title:"MyMarathon", description: "Conquer 26.2 miles throughout September and raise money for life saving heart research.", user_id: user2, campaign_logo: open("./public/img/bhf_logo.png"))
+campaign4 = Campaign.create(title:"MyMarathon", description: "Conquer 26.2 miles throughout September and raise money for life saving heart research.", user_id: user2, campaign_logo: open("./public/img/campaign4.jpg"))
 
-campaign5 = Campaign.create(title:"Just Walk", description:"Walk all over heart disease with Just Walk. Organise a walk and raise money for life saving heart research.", user_id: user2, campaign_logo: open("./public/img/bhf_logo.png"))
-campaign6 = Campaign.create(title:"Search and rescue in the Mediterranean Sea", description:"In 2015, we carried out search and rescue operations in the Mediterranean, providing lifesaving support to people in distress.", user_id: user3.id, campaign_logo: open("./public/img/campaign_mediterranean.jpg"))
-campaign7 = Campaign.create(title:"Rescing Migrants in the Mediterranean Sea", description:"In front of me, in the middle of the sea between Italy and Libya, were hundreds of youngsters. We rescued them one by one.", user_id: user4.id, campaign_logo: open("./public/img/campaign_mediterranean.jpg"))
+campaign5 = Campaign.create(title:"Just Walk", description:"Walk all over heart disease with Just Walk. Organise a walk and raise money for life saving heart research.", user_id: user2, campaign_logo: open("./public/img/campaign5.jpg"))
 
-campaign8 = Campaign.create(title:"Ebola Response", description:"The first cases were in Guinea, then Liberia, and the Ebola outbreak finally hit Sierra Leone in May 2014. To respond to this new crisis, EMERGENCY already had its Surgical and Paediatric Centre in Goderich – the traumatology centre of reference for West Africa for many years – reorganised and ready by more or less the beginning of the year.", user_id: user4.id, campaign_logo: open("./public/img/campaign_sierra.jpg"))
+campaign6 = Campaign.create(title:"Search and rescue in the Mediterranean Sea", description:"In 2015, we carried out search and rescue operations in the Mediterranean, providing lifesaving support to people in distress.", user_id: user3.id, campaign_logo: open("./public/img/campaign6.jpg"))
 
-campaign9 = Campaign.create(title:"Human Right Act", description:"The Human Rights Act is a powerful tool. It brings home fundamental, universal rights we all have as human beings, and allows us to challenge authorities if they violate them. Attacked by some, misreported by others and misunderstood by many – it’s time to spread the message that human rights matter.", user_id: user5.id, campaign_logo: open("./public/img/bhf_logo.png"))
+campaign7 = Campaign.create(title:"Rescing Migrants in the Mediterranean Sea", description:"In front of me, in the middle of the sea between Italy and Libya, were hundreds of youngsters. We rescued them one by one.", user_id: user4.id, campaign_logo: open("./public/img/campaign7.jpg"))
 
-campaign10 = Campaign.create(title:"Free Speech", description:"Free speech is the right to say whatever you like about whatever you like, whenever you like, right? Wrong. Free speech is one of our most important rights and one of the most misunderstood. Use your free speech to speak out for those that are denied theirs. But use it responsibly, it is a powerful thing.", user_id: user5.id, campaign_logo: open("./public/img/bhf_logo.png"))
+campaign8 = Campaign.create(title:"Ebola Response", description:"The first cases were in Guinea, then Liberia, and the Ebola outbreak finally hit Sierra Leone in May 2014. To respond to this new crisis, EMERGENCY already had its Surgical and Paediatric Centre in Goderich – the traumatology centre of reference for West Africa for many years – reorganised and ready by more or less the beginning of the year.", user_id: user4.id, campaign_logo: open("./public/img/campaign8.jpg"))
+
+campaign9 = Campaign.create(title:"Human Right Act", description:"The Human Rights Act is a powerful tool. It brings home fundamental, universal rights we all have as human beings, and allows us to challenge authorities if they violate them. Attacked by some, misreported by others and misunderstood by many – it’s time to spread the message that human rights matter.", user_id: user5.id, campaign_logo: open("./public/img/campaign9.jpg"))
+
+campaign10 = Campaign.create(title:"Free Speech", description:"Free speech is the right to say whatever you like about whatever you like, whenever you like, right? Wrong. Free speech is one of our most important rights and one of the most misunderstood. Use your free speech to speak out for those that are denied theirs. But use it responsibly, it is a powerful thing.", user_id: user5.id, campaign_logo: open("./public/img/campaign10.jpg"))
 
 
 

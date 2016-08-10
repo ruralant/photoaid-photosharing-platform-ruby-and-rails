@@ -12,21 +12,6 @@
 </div>
 <br>
 
-<% if is_charity? %>
-  <% current_user.campaigns.each do |campaign| %>
-    <div>
-      <%= campaign.title %>
-      <%= image_tag campaign.campaign_logo.thumb %>
-    </div>
-  <% end %>
-<% else %>
-  <% current_user.photos.each do |photo| %>
-    <div>
-      <%= photo.title %>
-    </div>
-    <% end %>
-<% end %>
-
 <div class="card-deck-wrapper">
   <div class="card-group">
     <% if is_charity? %>
