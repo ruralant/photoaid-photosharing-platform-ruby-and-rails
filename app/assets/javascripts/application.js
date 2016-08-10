@@ -17,29 +17,29 @@
 //= require turbolinks
 //= require_tree .
 
-// $(function(){
-//     $('#topnavbar').data('size','big');
-// });
+$(function(){
+    $('#topnavbar').data('size','big');
+});
 
-// $(window).scroll(function(){
-//     if($(document).scrollTop() > 0)
-//     {
-//         if($('#topnavbar').data('size') == 'big')
-//         {
-//             $('#topnavbar').data('size','small');
-//             $('#topnavbar').stop().animate({
-//                 height:'40px'
-//             },600);
-//         }
-//     }
-//     else
-//     {
-//         if($('#topnavbar').data('size') == 'small')
-//         {
-//             $('#topnavbar').data('size','big');
-//             $('#topnavbar').stop().animate({
-//                 height:'100px'
-//             },600);
-//         }  
-//     }
-// });
+$(window).scroll(function(){
+    if($(document).scrollTop() > 0)
+    {
+        if($('#topnavbar').data('size') == 'big')
+        {
+            $('#topnavbar').data('size','small');
+            $('#topnavbar').stop().animate({
+                height:'40px'
+            },600);
+        }
+    }
+    else
+    {
+        if($('#topnavbar').data('size') == 'small')
+        {
+            $('#topnavbar').data('size','big');
+            $('#topnavbar').stop().animate({
+                height:'60px'
+            },600);
+        }  
+    }
+});

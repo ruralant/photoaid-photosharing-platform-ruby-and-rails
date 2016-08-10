@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-4">
-    <%= link_to image_tag(@campaign.campaign_logo.thumb.url), @campaign.campaign_logo.url%>
+    <%= link_to image_tag(@campaign.campaign_logo.thumb.url, class: "img-rounded"), @campaign.campaign_logo.url%>
   </div>
   <div class="col-md-8">
     <p>
@@ -23,13 +23,12 @@
 <div class="card-columns">
   <% @campaign.photos.each do |photo| %>
     <div class="card">
-      <%= link_to image_tag(photo.campaign_pic.thumb.url, class: "card-img-top, img-fluid", alt: photo.title), photo.campaign %>
+      <%= link_to image_tag(photo.campaign_pic.thumb.url, class: "card-img-top, img-fluid", alt: photo.title), campaign_photo_path(@campaign, photo) %>
       <div class="card-block">
         <h4 class="card-title"><%= photo.title %></h4>
         <p class="card-text"><%= photo.description %></p>
         <small class="text-muted">Added on <%= distance_of_time_in_words(Time.now, photo.created_at) %> ago</small></p>
-        <%= link_to 'Show', campaign_photo_path(@campaign, photo), class: "btn btn-outline-primary" %>
-        <%= link_to 'Buy', campaign_photo_path(@campaign, photo), class: "btn btn-outline-primary" if is_donor? %> 
+        <%= link_to 'Buy', campaign_photo_path(@campaign, photo), class: "btn btn-outline-primary" if !is_charity? %> 
         <%= link_to 'Edit', edit_campaign_photo_path(@campaign, photo), class: "btn btn-outline-primary" if is_charity? || user_session == current_user.id %>
         <%= link_to 'Delete', campaign_photo_path(@campaign, photo), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" if is_charity? || user_session == current_user.id %>
       </div>
