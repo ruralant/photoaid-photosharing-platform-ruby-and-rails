@@ -5,3 +5,27 @@
 .homepage {
   text-align: center;
 }
+
+#intro {
+  background-image: url(./db/img/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: Helvetica, Arial, sans-serif;
+  color: #d4d4d4;
+  height: 90vh;
+  width: 100%;
+  padding: 5em 0 0 0;
+}
+
+.col-md-6 {
+  height: 20vh;
+}
+
+.about_us {
+  height: 20vh;
+}
+
+.col-md-4 {
+  height: 20vh;
+}

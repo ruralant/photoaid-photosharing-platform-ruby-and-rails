@@ -1,13 +1,15 @@
 <div class="homepage">
-  <h1>Photo Aid</h1>
-  <p>With your photos you can make the world a better place. Make a difference and join us!</p>
+  <div id="intro">
+    <h1>Photo Aid</h1>
+    <p>With your photos you can make the world a better place. Make a difference and join us!</p>
 
-  <button>
-    <%= link_to "Register", new_user_registration_path %>
-  </button>
-  <button>
-    <%= link_to "Sign In", new_user_session_path %>
-  </button>
+    <button>
+      <%= link_to "Register", new_user_registration_path %>
+    </button>
+    <button>
+      <%= link_to "Sign In", new_user_session_path %>
+    </button>
+  </div>
 
   <div class="row">
     <div class="col-md-6">
@@ -17,7 +19,7 @@
       Are you a charity? Register your campaign and receive donations and licensed photos from your supporters
     </div>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    <p id="about_us">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -56,7 +58,7 @@
         <li>Google+</li>
       </ul>
     </div>
-
+  </div>
 </div>
 
 
