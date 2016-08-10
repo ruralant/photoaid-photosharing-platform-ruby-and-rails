@@ -71,61 +71,61 @@ photo7 = Photo.create(title:"Poisoned Ocean", location:"Thailand", description:"
 
 photo8 = Photo.create(title:"Stop Global Worming", location:"Brazil", description:"Activists in sounth america against the golobal worming", user_id: user2.id, campaign_id: campaign5.id, campaign_pic: open("./public/img/photo8.jpg"))
 
-photo9 = Photo.create(title:"", location:"", description:"", user_id: user3.id, campaign_id: campaign6.id, campaign_pic: open("./public/img/photo9.jpg"))
+photo9 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user3.id, campaign_id: campaign6.id, campaign_pic: open("./public/img/photo9.jpg"))
 
-photo10 = Photo.create(title:"", location:"", description:"", user_id: user3.id, campaign_id: campaign6.id, campaign_pic: open("./public/img/photo10.jpg"))
+photo10 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user3.id, campaign_id: campaign6.id, campaign_pic: open("./public/img/photo10.jpg"))
 
-photo11 = Photo.create(title:"", location:"", description:"", user_id: user3.id, campaign_id: campaign6.id, campaign_pic: open("./public/img/photo11.jpg"))
+photo11 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user3.id, campaign_id: campaign6.id, campaign_pic: open("./public/img/photo11.jpg"))
 
-photo12 = Photo.create(title:"", location:"", description:"", user_id: user3.id, campaign_id: campaign6.id, campaign_pic: open("./public/img/photo12.jpg"))
+photo12 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user3.id, campaign_id: campaign6.id, campaign_pic: open("./public/img/photo12.jpg"))
 
-photo13 = Photo.create(title:"", location:"", description:"", user_id: user4.id, campaign_id: campaign7.id, campaign_pic: open("./public/img/photo13.jpg"))
+photo13 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user4.id, campaign_id: campaign7.id, campaign_pic: open("./public/img/photo13.jpg"))
 
-photo14 = Photo.create(title:"", location:"", description:"", user_id: user4.id, campaign_id: campaign7.id, campaign_pic: open("./public/img/photo14.jpg"))
+photo14 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user4.id, campaign_id: campaign7.id, campaign_pic: open("./public/img/photo14.jpg"))
 
-photo15 = Photo.create(title:"", location:"", description:"", user_id: user4.id, campaign_id: campaign8.id, campaign_pic: open("./public/img/photo15.jpg"))
+photo15 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user4.id, campaign_id: campaign8.id, campaign_pic: open("./public/img/photo15.jpg"))
 
-photo16 = Photo.create(title:"", location:"", description:"", user_id: user4.id, campaign_id: campaign8.id, campaign_pic: open("./public/img/photo16.jpg"))
+photo16 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user4.id, campaign_id: campaign8.id, campaign_pic: open("./public/img/photo16.jpg"))
 
-photo17 = Photo.create(title:"", location:"", description:"", user_id: user5.id, campaign_id: campaign9.id, campaign_pic: open("./public/img/photo17.jpg"))
+photo17 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user5.id, campaign_id: campaign9.id, campaign_pic: open("./public/img/photo17.jpg"))
 
-photo18 = Photo.create(title:"", location:"", description:"", user_id: user5.id, campaign_id: campaign9.id, campaign_pic: open("./public/img/photo18.jpg"))
+photo18 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user5.id, campaign_id: campaign9.id, campaign_pic: open("./public/img/photo18.jpg"))
 
-photo19 = Photo.create(title:"", location:"", description:"", user_id: user5.id, campaign_id: campaign10.id, campaign_pic: open("./public/img/photo19.jpg"))
+photo19 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user5.id, campaign_id: campaign10.id, campaign_pic: open("./public/img/photo19.jpg"))
 
-photo20 = Photo.create(title:"", location:"", description:"", user_id: user5.id, campaign_id: campaign10.id, campaign_pic: open("./public/img/photo20.jpg"))
+photo20 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user5.id, campaign_id: campaign10.id, campaign_pic: open("./public/img/photo20.jpg"))
 
-photo21 = Photo.create(title:"", location:"", description:"", user_id: user6.id, campaign_id: campaign1.id, campaign_pic: open("./public/img/photo21.jpg"))
+photo21 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user6.id, campaign_id: campaign1.id, campaign_pic: open("./public/img/photo21.jpg"))
 
-photo22 = Photo.create(title:"", location:"", description:"", user_id: user6.id, campaign_id: campaign1.id, campaign_pic: open("./public/img/photo22.jpg"))
+photo22 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user6.id, campaign_id: campaign1.id, campaign_pic: open("./public/img/photo22.jpg"))
 
-photo23 = Photo.create(title:"", location:"", description:"", user_id: user6.id, campaign_id:campaign1.id, campaign_pic: open("./public/img/photo23.jpg"))
+photo23 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user6.id, campaign_id:campaign1.id, campaign_pic: open("./public/img/photo23.jpg"))
 
-photo24 = Photo.create(title:"", location:"", description:"", user_id: user6.id, campaign_id: campaign2.id, campaign_pic: open("./public/img/photo24.jpg"))
+photo24 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user6.id, campaign_id: campaign2.id, campaign_pic: open("./public/img/photo24.jpg"))
 
-photo25 = Photo.create(title:"", location:"", description:"", user_id: user7.id, campaign_id: campaign2.id, campaign_pic: open("./public/img/photo25.jpg"))
+photo25 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user7.id, campaign_id: campaign2.id, campaign_pic: open("./public/img/photo25.jpg"))
 
-photo26 = Photo.create(title:"", location:"", description:"", user_id: user7.id, campaign_id: campaign3.id, campaign_pic: open("./public/img/photo26.jpg"))
+photo26 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user7.id, campaign_id: campaign3.id, campaign_pic: open("./public/img/photo26.jpg"))
 
-photo27 = Photo.create(title:"", location:"", description:"", user_id: user7.id, campaign_id: campaign3.id, campaign_pic: open("./public/img/photo27.jpg"))
+photo27 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user7.id, campaign_id: campaign3.id, campaign_pic: open("./public/img/photo27.jpg"))
 
-photo28 = Photo.create(title:"", location:"", description:"", user_id: user7.id, campaign_id: campaign4.id, campaign_pic: open("./public/img/photo28.jpg"))
+photo28 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user7.id, campaign_id: campaign4.id, campaign_pic: open("./public/img/photo28.jpg"))
 
-photo29 = Photo.create(title:"", location:"", description:"", user_id: user8.id, campaign_id: campaign4.id, campaign_pic: open("./public/img/photo29.jpg"))
+photo29 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user8.id, campaign_id: campaign4.id, campaign_pic: open("./public/img/photo29.jpg"))
 
-photo30 = Photo.create(title:"", location:"", description:"", user_id: user8.id, campaign_id: campaign5.id, campaign_pic: open("./public/img/photo30.jpg"))
+photo30 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user8.id, campaign_id: campaign5.id, campaign_pic: open("./public/img/photo30.jpg"))
 
-photo31 = Photo.create(title:"", location:"", description:"", user_id: user8.id, campaign_id: campaign5.id, campaign_pic: open("./public/img/photo31.jpg"))
+photo31 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user8.id, campaign_id: campaign5.id, campaign_pic: open("./public/img/photo31.jpg"))
 
-photo32 = Photo.create(title:"", location:"", description:"", user_id: user8.id, campaign_id: campaign7.id, campaign_pic: open("./public/img/photo32.jpg"))
+photo32 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user8.id, campaign_id: campaign7.id, campaign_pic: open("./public/img/photo32.jpg"))
 
-photo33 = Photo.create(title:"", location:"", description:"", user_id: user9.id, campaign_id: campaign7.id, campaign_pic: open("./public/img/photo33.jpg"))
+photo33 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user9.id, campaign_id: campaign7.id, campaign_pic: open("./public/img/photo33.jpg"))
 
-photo34 = Photo.create(title:"", location:"", description:"", user_id: user9.id, campaign_id: campaign8.id, campaign_pic: open("./public/img/photo34.jpg"))
+photo34 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user9.id, campaign_id: campaign8.id, campaign_pic: open("./public/img/photo34.jpg"))
 
-photo35 = Photo.create(title:"", location:"", description:"", user_id: user9.id, campaign_id: campaign8.id, campaign_pic: open("./public/img/photo35.jpg"))
+photo35 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user9.id, campaign_id: campaign8.id, campaign_pic: open("./public/img/photo35.jpg"))
 
-photo36 = Photo.create(title:"", location:"", description:"", user_id: user9.id, campaign_id: campaign9.id, campaign_pic: open("./public/img/photo36.jpg"))
+photo36 = Photo.create(title:"title", location:"location", description:"description, description, description, description, description, description, description", user_id: user9.id, campaign_id: campaign9.id, campaign_pic: open("./public/img/photo36.jpg"))
 
 photo37 = Photo.create(title:"Freendom of Speeh", location:"", description:"", user_id: user10.id, campaign_id: campaign9.id, campaign_pic: open("./public/img/photo37.jpg"))
 .id

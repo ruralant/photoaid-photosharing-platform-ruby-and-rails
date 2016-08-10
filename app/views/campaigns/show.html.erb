@@ -20,23 +20,21 @@
 
 <br>
 
-<div class="card-deck-wrapper">
-  <div class="card-deck">
-    <% @campaign.photos.each do |photo| %>
-      <div class="card">
-        <%= image_tag photo.campaign_pic.thumb.url, class: "card-img-top", class: "img-fluid", alt: photo.title %>
-        <div class="card-block">
-          <h4 class="card-title"><%= photo.title %></h4>
-          <p class="card-text"><%= photo.description %></p>
-          <small class="text-muted">Added on <%= distance_of_time_in_words(Time.now, photo.created_at) %> ago</small></p>
-          <%= link_to 'Show', campaign_photo_path(@campaign, photo), class: "btn btn-primary" %>
-          <%= link_to 'Buy', campaign_photo_path(@campaign, photo), class: "btn btn-primary" %> 
-          <%= link_to 'Edit', edit_campaign_photo_path(@campaign, photo), class: "btn btn-primary" if is_charity? || user_session == current_user.id %>
-          <%= link_to 'Delete', campaign_photo_path(@campaign, photo), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" if is_charity? || user_session == current_user.id %>
-        </div>
+<div class="card-columns">
+  <% @campaign.photos.each do |photo| %>
+    <div class="card">
+      <%= link_to image_tag(photo.campaign_pic.thumb.url, class: "card-img-top", class: "img-fluid", alt: photo.title), photo.campaign %>
+      <div class="card-block">
+        <h4 class="card-title"><%= photo.title %></h4>
+        <p class="card-text"><%= photo.description %></p>
+        <small class="text-muted">Added on <%= distance_of_time_in_words(Time.now, photo.created_at) %> ago</small></p>
+        <%= link_to 'Show', campaign_photo_path(@campaign, photo), class: "btn btn-outline-primary" %>
+        <%= link_to 'Buy', campaign_photo_path(@campaign, photo), class: "btn btn-outline-primary" if is_donor? %> 
+        <%= link_to 'Edit', edit_campaign_photo_path(@campaign, photo), class: "btn btn-outline-primary" if is_charity? || user_session == current_user.id %>
+        <%= link_to 'Delete', campaign_photo_path(@campaign, photo), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" if is_charity? || user_session == current_user.id %>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
 
 <%= link_to 'Back', campaigns_path %>
