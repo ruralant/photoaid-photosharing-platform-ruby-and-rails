@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>PhotoAid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
@@ -16,12 +17,12 @@
             <% if current_user %>
               <!-- <img src="/images/logo.png" alt="logo" class="navbar-brand"></a> -->
               <a class="navbar-brand">Hi <%= current_user.first_name || (current_user.name if is_charity?) %>!</a>
-              <li class="nav-item"><%= link_to "Campaigns", campaigns_path, class:"nav-link"%></li>
+              <li class="nav-item"><%= link_to "Campaigns", campaigns_path, class:"nav-link btn btn-outline-secondary"%></li>
               <% if is_donor? %>
-                <li class="nav-item"><%= link_to "Charities", campaigns_path, class:"nav-link"%></li>
+                <li class="nav-item"><%= link_to "Charities", campaigns_path, class:"nav-link btn btn-outline-secondary"%></li>
               <% end %>
-              <li class="nav-item"><%= link_to "Your Profile", users_path, class:"nav-link" %></li>
-              <li class="nav-item"><%= link_to "Log out", destroy_user_session_path, method: :delete, class:"nav-link" %></li>
+              <li class="nav-item"><%= link_to "Your Profile", users_path, class:"nav-link btn btn-outline-secondary" %></li>
+              <li class="form-inline pull-xs-right"><%= link_to "Log out", destroy_user_session_path, method: :delete, class:"nav-link btn btn-outline-secondary" %></li>
           <% else %>
               <li class="nav-item"><%= link_to "Sign In", new_user_session_path, class:"nav-link" %></li>
               <li class="nav-item"><%= link_to "Register", new_user_registration_path, class:"nav-link" %></li>
@@ -30,7 +31,7 @@
         </div>
       </nav>
     </header>
-    <main class="container">
+    <main class="container-flat">
       <%= yield %>
     </main>
   </body>

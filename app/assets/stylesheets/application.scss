@@ -17,8 +17,12 @@
 @import "bootstrap";
 
 body {
-  margin-top: 80px;
+  margin-top: 60px;
   font-family: 'Roboto', sans-serif;
+}
+
+.row, .card-columns {
+  padding: 2% 5% 0 5%;
 }
 
 #topnavbar {
@@ -50,4 +54,11 @@ nav ul li {
 
 .devise_forms_sign {
   margin-top: 5%;
+}
+
+.centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }

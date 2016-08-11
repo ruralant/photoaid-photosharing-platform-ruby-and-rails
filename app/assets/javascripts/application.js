@@ -18,17 +18,21 @@
 //= require_tree .
 
 $(function(){
-    $('#topnavbar').data('size','big');
+    $('#topnavbar').data('size','large');
 });
 
 $(window).scroll(function(){
     if($(document).scrollTop() > 0)
     {
-        if($('#topnavbar').data('size') == 'big')
+        if($('#topnavbar').data('size') == 'large')
         {
             $('#topnavbar').data('size','small');
             $('#topnavbar').stop().animate({
-                height:'40px'
+                height:'45px'
+            },600);
+            $('#topnavbar a').data('size','small');
+            $('#topnavbar a').stop().animate({
+                paddingTop:'1px'
             },600);
         }
     }
@@ -36,9 +40,13 @@ $(window).scroll(function(){
     {
         if($('#topnavbar').data('size') == 'small')
         {
-            $('#topnavbar').data('size','big');
+            $('#topnavbar').data('size','large');
             $('#topnavbar').stop().animate({
                 height:'60px'
+            },600);
+            $('#topnavbar a').data('size','small');
+            $('#topnavbar a').stop().animate({
+                paddingTop:'6px'
             },600);
         }  
     }

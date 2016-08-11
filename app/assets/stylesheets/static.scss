@@ -7,7 +7,7 @@
 }
 
 #intro {
-  background-image: url(./db/img/background.jpg);
+  background-image: url(/images/background.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -15,17 +15,21 @@
   color: #d4d4d4;
   height: 90vh;
   width: 100%;
-  padding: 5em 0 0 0;
+  padding: 10em 0 0 0;
 }
 
-.col-md-6 {
-  height: 20vh;
+#home_2_column {
+  padding: 2% 15%;
 }
 
-.about_us {
-  height: 20vh;
+#home_2_column p {
+  margin-top: 5%;
 }
 
-.col-md-4 {
+#about_us {
+  padding: 2% 10%;
+}
+
+#home_3_column {
   height: 20vh;
 }
