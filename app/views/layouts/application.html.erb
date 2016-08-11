@@ -14,7 +14,7 @@
         <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
           <ul class="nav navbar-nav">
             <% if current_user %>
-              <!-- <img src="./db/img/logo.png" alt="logo" class="navbar-brand"></a> -->
+              <!-- <img src="/images/logo.png" alt="logo" class="navbar-brand"></a> -->
               <a class="navbar-brand">Hi <%= current_user.first_name || (current_user.name if is_charity?) %>!</a>
               <li class="nav-item"><%= link_to "Campaigns", campaigns_path, class:"nav-link"%></li>
               <% if is_donor? %>

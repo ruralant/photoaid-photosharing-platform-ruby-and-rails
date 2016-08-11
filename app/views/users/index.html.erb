@@ -34,7 +34,7 @@
         <p class="card-text"><%= photo.description %></p>
         <small class="text-muted">Added on <%= distance_of_time_in_words(Time.now, photo.campaign.created_at) %> ago</small></p>
         <%= link_to 'Edit', edit_campaign_photo_path(photo.campaign, photo), class: "btn btn-outline-primary" %>
-        <%= link_to 'Destroy', campaign_photo_path(photo.campaign, photo), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
+        <%= link_to 'Delete', campaign_photo_path(photo.campaign, photo), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-outline-danger" %>
       </div>
     </div>      
     <% end %>

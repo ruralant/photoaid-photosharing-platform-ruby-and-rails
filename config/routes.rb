@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :campaigns do
     resources :photos
   end
+  resources :charges
   devise_for :users
   resources :users, only: [:index, :show]
   root 'static#homepage'
