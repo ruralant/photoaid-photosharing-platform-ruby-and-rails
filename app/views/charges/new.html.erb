@@ -5,10 +5,10 @@
         <p><%= flash[:error] %></p>
       </div>
     <% end %>
- <article>
-   <%=label_tag(:amount, 'Donation Amount:') %>
-   <%=text_field_tag(:amount) %>
- </article>
+    <article>
+      <%=label_tag(:amount, 'Donation Amount:') %>
+      <%=text_field_tag(:amount) %>
+    </article>
   </article>
 
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -17,5 +17,6 @@
           data-amount="500"
           data-currency="gbp"
           data-bitcoin="true"
-          data-locale="auto"></script>
+          data-locale="auto">
+  </script>
 <% end %>
