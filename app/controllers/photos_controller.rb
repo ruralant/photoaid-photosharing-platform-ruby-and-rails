@@ -48,7 +48,7 @@ class PhotosController < ApplicationController
   def destroy
     @photo.destroy
     respond_to do |format|
-      format.html { redirect_to campaign_photos_path(@campaign), notice: 'Photo was successfully destroyed.' }
+      format.html { redirect_to users_path, notice: 'Photo was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

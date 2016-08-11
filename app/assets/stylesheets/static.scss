@@ -7,7 +7,7 @@
 }
 
 #intro {
-  background-image: url(/images/background.jpg);
+  background-image: url(/images/background2.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -27,9 +27,17 @@
 }
 
 #about_us {
-  padding: 2% 10%;
+  font-size: 1.2em;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  background-image: url(/images/about_us_background2.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 5% 10%;
 }
 
-#home_3_column {
-  height: 20vh;
+#home_3_column img {
+  margin: 5% auto;
+  width: 30%
 }

@@ -15,18 +15,19 @@
         <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
           <ul class="nav navbar-nav">
             <% if current_user %>
-              <!-- <img src="/images/logo.png" alt="logo" class="navbar-brand"></a> -->
+              <img src="/images/logo.png" alt="logo" class="navbar-brand" id="logo"></a>
               <a class="navbar-brand">Hi <%= current_user.first_name || (current_user.name if is_charity?) %>!</a>
-              <li class="nav-item"><%= link_to "Campaigns", campaigns_path, class:"nav-link btn btn-outline-secondary"%></li>
+              <li class="nav-item"><%= link_to "Campaigns", campaigns_path, class:"nav-link"%></li>
               <% if is_donor? %>
                 <li class="nav-item"><%= link_to "Charities", campaigns_path, class:"nav-link btn btn-outline-secondary"%></li>
               <% end %>
-              <li class="nav-item"><%= link_to "Your Profile", users_path, class:"nav-link btn btn-outline-secondary" %></li>
-              <li class="form-inline pull-xs-right"><%= link_to "Log out", destroy_user_session_path, method: :delete, class:"nav-link btn btn-outline-secondary" %></li>
+              <li class="nav-item"><%= link_to "Your Profile", users_path, class:"nav-link" %></li>
+              <li class="form-inline pull-xs-right"><%= link_to "Log out", destroy_user_session_path, method: :delete, class:"nav-link" %></li>
           <% else %>
-              <li class="nav-item"><%= link_to "Sign In", new_user_session_path, class:"nav-link" %></li>
-              <li class="nav-item"><%= link_to "Register", new_user_registration_path, class:"nav-link" %></li>
-            </ul>
+            <img src="/images/logo.png" alt="logo" class="navbar-brand" id="logo"></a>
+            <li class="nav-item"><%= link_to "Sign In", new_user_session_path, class:"nav-link" %></li>
+            <li class="nav-item"><%= link_to "Register", new_user_registration_path, class:"nav-link" %></li>
+          </ul>
           <% end %>
         </div>
       </nav>
