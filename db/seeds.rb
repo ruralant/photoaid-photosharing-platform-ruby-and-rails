@@ -52,6 +52,9 @@ campaign9 = Campaign.create(title:"Human Right Act", description:"The Human Righ
 
 campaign10 = Campaign.create(title:"Free Speech", description:"Free speech is the right to say whatever you like about whatever you like, whenever you like, right? Wrong. Free speech is one of our most important rights and one of the most misunderstood. Use your free speech to speak out for those that are denied theirs. But use it responsibly, it is a powerful thing.", user_id: user5.id, campaign_logo: open("./db/img/campaign10.jpg"))
 
+campaign11 = Campaign.create(title:"Land Grabbing", description:"Big land deals in poor countries are leaving people homeless and hungry. Families are being unfairly evicted from their land and left with no way to grow food or earn a living.", user_id: user1.id, campaign_logo: open("./db/img/campaign11.png"))
+
+campaign12 = Campaign.create(title:"Grow", description:"Everything connects: food and oil prices, flatlining yields, climate change, gender inequality, land grabs... These issues combine to create a system that's dominated by a few powerful companies and governments. We need a new way of thinking, and ideas that hold a promise of a better future for the many not just the few. Failed crops - often caused by our changing climate - hit food prices hard. Short-sighted biofuels strategies play a part too - taking food off people's plates and putting it into car tanks. Dysfunctional commodities markets mean that food prices go up faster and higher than they should. The effects on poor people are painfully simple. Parents choose between feeding their children and feeding themselves.", user_id: user1.id, campaign_logo: open("./db/img/campaign12.jpg"))
 
 
 

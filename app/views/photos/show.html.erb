@@ -1,19 +1,15 @@
 <div id="photopage">
+  
+  <h4>Title:</h4>
+  <p><%= @photo.title %></p>
 
-  <p>
-    <strong>Title:</strong>
-    <%= @photo.title %>
-  </p>
 
-  <p>
-    <strong>Location:</strong>
-    <%= @photo.location %>
-  </p>
+  <h4>Location:</h4>
+  <p><%= @photo.location %></p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @photo.description %>
-  </p>
+
+  <h4>Description:</h4>
+  <p><%= @photo.description %></p>
 
   <div class="image">
     <%= image_tag @photo.campaign_pic.url %>

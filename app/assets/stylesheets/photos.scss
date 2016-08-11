@@ -4,4 +4,22 @@
 
 #photopage {
  text-align: center;
+ padding: 20px 0;
+}
+
+#photopage h4 {
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+#photopage p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  letter-spacing: 0.8px;
+}
+
+#photopage img {
+  max-width: 60%;
+  margin: 5%;
+  border:1px solid #021a40;
 }
