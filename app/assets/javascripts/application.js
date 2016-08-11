@@ -20,7 +20,7 @@
 $(document).on("turbolinks:load", function() {
     $navbar = $('#topnavbar');
     $(window).on('scroll', function() {
-        if($(this).scrollTop() > 60) {
+        if($(this).scrollTop() > 30) {
             $navbar.addClass('small');
         } else {
             $navbar.removeClass('small');
@@ -38,46 +38,3 @@ $(document).on("turbolinks:load", function() {
         }
     })
 });
-
-// $(function(){
-//     $('#topnavbar').data('size','large');
-// });
-
-// $(window).scroll(function(){
-//     if($(document).scrollTop() > 0)
-//     {
-//         if($('#topnavbar').data('size') == 'large')
-//         {
-//             $('#topnavbar').data('size','small');
-//             $('#topnavbar').stop().animate({
-//                 height:'45px'
-//             },600);
-//             $('#topnavbar a').data('size','small');
-//             $('#topnavbar a').stop().animate({
-//                 paddingTop:'1px'
-//             },600);
-//             $('#logo').data('size','small');
-//             $('#logo').stop().animate({
-//                 width:'2%'
-//             },600);
-//         }
-//     }
-//     else
-//     {
-//         if($('#topnavbar').data('size') == 'small')
-//         {
-//             $('#topnavbar').data('size','large');
-//             $('#topnavbar').stop().animate({
-//                 height:'60px'
-//             },600);
-//             $('#topnavbar a').data('size','small');
-//             $('#topnavbar a').stop().animate({
-//                 paddingTop:'6px'
-//             },600);
-//             $('#logo').data('size','small');
-//             $('#logo').stop().animate({
-//                 width:'3%'
-//             },600);
-//         }  
-//     }
-// });

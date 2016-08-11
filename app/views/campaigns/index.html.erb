@@ -1,5 +1,11 @@
-<h1>Campaigns</h1>
-<%= link_to 'Add a New Campaign', new_campaign_path, class: "btn btn-outline-primary" if is_charity? %>
+<div class="campaign_top">
+  <div class="campaign_title">
+  <h1>Campaigns</h1>
+  </div>
+  <div class="campaign_button">
+  <%= link_to 'Add a New Campaign', new_campaign_path, class: "btn btn-outline-primary" if is_charity? %>
+  </div>
+</div>
   <div class="card-columns">
     <% @campaigns.each do |campaign| %>
       <% if campaign.user_id == current_user.id || current_user.role == "donor" %>
