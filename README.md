@@ -88,3 +88,16 @@ Wednesday: I was focused on the UX and Javascript. I also consolidated the seed 
 I also fixed some bugs that I found navigating the system as used for around an hour. 
 
 ---
+
+##Recordgnised Bugs
+
+There are a few sections that needs to be styled better, in particular the footer of the landing page and some adjustment in the mobile version using **media queries**. 
+
+---
+##Future Developments
+
+**v1.5**
+Add comments on the Campaign page
+
+**v2.0**
+Allow more intercactions between users.
