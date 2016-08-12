@@ -7,7 +7,9 @@
 // }
 
 @media only screen and (min-width : 768px) {
-  img {
-    margin: auto;
+  .img-rounded {
+        display: block;
+        margin: auto;
+        width: 40%;
+    }
   }
-}

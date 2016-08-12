@@ -9,9 +9,9 @@
 As second project of the Web Development Immersive course at General Assembly I develop a photosharing website in **Ruby on Rails**.
 As aforementioned, ***Photo-Aid*** is a combination between a photosharing and a foundraising website.
 
-Photo-Aid allows charities to create campaign and user to contribute to their cause donating photos or buying them.
+Photo-Aid allows charities to create campaigns and users to contribute to their cause donating photos or buying them.
 
-As former professional photographer and current photo entisiast, I am avare that we shoot a huge amout of photo just for keeping 10% of them. The idea was to create a website that allows the donors to contribute to the charitable initiative with both dontations and with the photos shooted in excess.
+As former professional photographer and current photo enthusiast, I am aware that we shoot a huge amout of photo just for keeping 10% of them. The idea was to create a website that allows the donors to contribute to charitable initiatives with both dontations and photos shooted in excess.
 
 
 ## Technologies Used: 
@@ -46,7 +46,7 @@ For accomplice the project I also used the following tools:
 
 - **Photoshop CC**: I used it mainly for create a consistency in the photo resulution and weight before upload and before using *Rmagic*.
 
-- **MacDown**: as text edito for creating the ReadMe file.
+- **MacDown**: as text editor for creating the ReadMe file.
 
 - **Heroku**: for deploy the webiste.
 
@@ -85,13 +85,13 @@ On Tuesday I created a quite extensive seed file, fixed numerous bugs and I reac
 Wednesday: I was focused on the UX and Javascript. I also consolidated the seed file and added the last gem.
 
 -- In the last day of work I made from scratch the style using **SASS** and I created the shrinking navbar. 
-I also fixed some bugs that I found navigating the system as used for around an hour. 
+I also fixed some bugs that I found testing the webiste as used for around an hour. 
 
 ---
 
 ##Recordgnised Bugs
 
-There are a few sections that needs to be styled better, in particular the footer of the landing page and some adjustment in the mobile version using **media queries**. 
+There are a few sections that needs to be styled better, in particular the footer of the landing page. Moreover, the project needs some adjustments on the mobile version using more **media queries**. 
 
 ---
 ##Future Developments
