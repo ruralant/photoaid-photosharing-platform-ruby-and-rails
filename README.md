@@ -4,29 +4,43 @@
 
 ![](https://s3-eu-west-1.amazonaws.com/photo-aid/Schermata+2016-08-12+alle+00.29.12.png) 
 
-##The Project:
+##What is Photo Aid:
 
-As second project of the Web Development Immersive course at General Assembly I develop a photosharing website in **Ruby on Rails**.
-As aforementioned, ***Photo-Aid*** is a combination between a photosharing and a foundraising website.
+**Photo-Aid** is a combination between a photosharing platform and a foundraising website.
 
-Photo-Aid allows charities to create campaigns and users to contribute to their cause donating photos or buying them.
+For a few years I worked as professional photographer and also nowadays I am consider myself a photo enthusiast. Moreover I alwasy been involved in the charity sector through volonteer work. With **Photo-Aid** I decided to combine this two passions allowin people to donate their photos to the charities. 
 
-As former professional photographer and current photo enthusiast, I am aware that we shoot a huge amout of photo just for keeping 10% of them. The idea was to create a website that allows the donors to contribute to charitable initiatives with both dontations and photos shooted in excess.
+When we shoots photos with the mobile phone and cameras we usually shoot 3 or 4 photos of the same subject in order to be able so select the best one. The idea was to create a website that allows the donors to contribute to charitable initiatives with both dontations and with the photos shooted in excess.
+
+From the charitis prospective, Photo Aid allows them to create campaigns and receive donation in form of both money or photos.  
+
+#### Here you can see the live version: <https://photoaid.herokuapp.com/>
+
+
 
 
 ## Technologies Used: 
 
 The entire project is based on **Ruby on Rails 5** and **Bootstrap 4 Alpha**, with the following gems:
 
+- **Ruby**
+- **Ruby in Rails**
+- **jQuery**
+- **HTML5**
+- **SASS**
 - **Devise**
-
+- **Bootstrap 4**
 - **Carrierwave**
-
 - **Rmagick**
-
 - **Fog**
-
 - **Stripe**
+- **AWS S3 Storage**
+- **Heroku**
+- **Postgresql Database**
+- **Sublime Editor**
+- **Adobe Photoshop**
+- **Balsamic**
+- **MacDown**
 
 **Devise** is a useful gem for implement an authentication system. I had to choose between **Devise** and **Bcrypt** however, due to the duration of the project, I prefereed Devise because is featured with several useful tools for build quickly a strong authentication system.
 
@@ -66,27 +80,6 @@ Later I designed the desktop version:
 
 ![](https://s3-eu-west-1.amazonaws.com/photo-aid/New+Mockup+2.png) 
 
---
-
-The second day I created the **User module**, I created the **authentication system** usign the gem Devise and, instead of creating a second module for the Charities, I implmented the two role in the user module.
-
---
-
-The third day I created **three uploader**: one for the *users profile*, one for the *campaign logo* and one as main *uploader for the user's photos*.
-
-On Monday I started to work on the relationships and I created the main stucture of the website.
-
---
-
-On Tuesday I created a quite extensive seed file, fixed numerous bugs and I reached a fully working MVP.
-
---
-
-Wednesday: I was focused on the UX and Javascript. I also consolidated the seed file and added the last gem.
-
--- In the last day of work I made from scratch the style using **SASS** and I created the shrinking navbar. 
-I also fixed some bugs that I found testing the webiste as used for around an hour. 
-
 ---
 
 ##Recordgnised Bugs
@@ -96,8 +89,20 @@ There are a few sections that needs to be styled better, in particular the foote
 ---
 ##Future Developments
 
+**v1.1**
+UX bugfix. 
+
 **v1.5**
-Add comments on the Campaign page
+Add a comments section in the Campaign page.
 
 **v2.0**
-Allow more intercactions between users.
+Allow more interactions between users with the creations of public profiles.
+
+---
+###For run the app locally, follow the next steps:
+
+- Clone the app from Github
+- Run "bundle" on the terminal to get the required gems.
+- Run "rails db:create db:migrate db:seed" to load the provided database.
+- Run "rails s" to start the server
+- On the browser, go to "localhost:3000"
