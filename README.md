@@ -65,6 +65,17 @@ For accomplice the project I also used the following tools:
 
 - **Heroku**: for deploy the webiste.
 
+
+--
+
+I designed the website using the "mobile first" method:
+
+![](https://s3-eu-west-1.amazonaws.com/photo-aid/Mobile+Mockup.png)
+
+In a later stage I also designed also the web version:
+
+![](https://s3-eu-west-1.amazonaws.com/photo-aid/New+Mockup+2.png)
+
 --
 
 The project is based on **three modules**: **Users** (that comprehensive of two role: charity and donor), **Campaigns** and **Photos**. At the start I planned to used for modules but a the end of the first day I dediced to unify the Users and Charities under one module for making esier to implement the authentication system and the reletionships between modules. 
