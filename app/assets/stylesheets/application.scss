@@ -135,16 +135,23 @@ ul {
 }
 
 @media(max-width:768px) {
+    #topnavbar {
+      min-height: 60px;
+    }
+
     .navbar .navbar-nav>.nav-item {
         float: none;
         margin-left: .1rem;
     }
+
     .navbar .navbar-nav {
         float:none !important;
     }
+
     .navbar .collapse.in, .navbar .collapsing  {
         clear:both;
     }
+    
     .navbar-brand {
       display: none;
     }
