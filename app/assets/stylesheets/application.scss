@@ -133,3 +133,19 @@ ul {
   top: 50%;
   transform: translate(-50%,-50%);
 }
+
+@media(max-width:768px) {
+    .navbar .navbar-nav>.nav-item {
+        float: none;
+        margin-left: .1rem;
+    }
+    .navbar .navbar-nav {
+        float:none !important;
+    }
+    .navbar .collapse.in, .navbar .collapsing  {
+        clear:both;
+    }
+    .navbar-brand {
+      display: none;
+    }
+}
