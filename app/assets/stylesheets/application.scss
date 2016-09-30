@@ -136,7 +136,7 @@ ul {
 
 @media(max-width:768px) {
     #topnavbar {
-      min-height: 60px;
+      height: none;
     }
 
     .navbar .navbar-nav>.nav-item {
@@ -151,7 +151,7 @@ ul {
     .navbar .collapse.in, .navbar .collapsing  {
         clear:both;
     }
-    
+
     .navbar-brand {
       display: none;
     }
